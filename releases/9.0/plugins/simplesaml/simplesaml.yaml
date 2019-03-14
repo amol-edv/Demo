@@ -1,0 +1,8 @@
+name: simplesaml
+desc: [Advanced] Require SAML authentication to access ResourceSpace
+author: Montala Limited
+version: 1.0
+config_url: /plugins/simplesaml/pages/setup.php
+info_url: /plugins/simplesaml/pages/about.php
+category: authentication
+disable_group_select: 1

@@ -329,6 +329,11 @@ if ($submitted != "")
 					collection_download_use_original_filenames_when_downloading($filename, $ref, $collection_download_tar, $filenames);
 					}
 
+                if ($filename =='')
+                    {
+                    // Filename is blank so use default filename
+                    $filename = $prefix_filename_string . $ref . "." . $pextension;
+                    }
                 if (hook("downloadfilenamealt")) $filename=hook("downloadfilenamealt");
 
                 collection_download_process_text_file($ref, $collection, $filename);

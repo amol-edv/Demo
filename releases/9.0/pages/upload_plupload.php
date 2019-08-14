@@ -1116,12 +1116,13 @@ var pluploadconfig = {
                                         {
                                         filename = filename.substr(0, file.name.lastIndexOf('.' + filename_ext));
                                         }
-
+                                    
                                     // Add resource ID - filename map only for original resources
                                     if(filename.lastIndexOf(alternative_suffix) === -1)
                                         {
                                         resource_ids_for_alternatives[uploaded_resource_id] = filename;
                                         }
+
                                     <?php
                                     }?>
                                         
@@ -1310,7 +1311,7 @@ if($attach_alternatives_found_to_resources)
             }
 
         filename = file.name.substr(0, file.name.lastIndexOf('.' + getFilePathExtension(file.name)));
-
+        
         // Check if original file, in which case we stop here
         if(filename.lastIndexOf(alternative_suffix) === -1)
             {
@@ -1331,6 +1332,7 @@ if($attach_alternatives_found_to_resources)
 
         // If we've got so far, it means we can upload this file as an alternative for this resource ID
         uploader.settings.url = ReplaceUrlParameter(uploader.settings.url, 'alternative', resource_id);
+
         });
 
     uploader.bind('UploadComplete', function (up, files)

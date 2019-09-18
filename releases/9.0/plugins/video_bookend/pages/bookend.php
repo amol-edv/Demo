@@ -45,7 +45,7 @@ if (getval("submit", "") != "" && enforcePostRequest(false))
             $shell_exec_cmd .= " -pix_fmt yuv420p -c:a mp3";
             $shell_exec_cmd .= " -t " . escapeshellarg($video_bookend_seconds) . " ";
             $shell_exec_cmd .= escapeshellarg($path[$n]);
-
+echo $shell_exec_cmd;
             exec($shell_exec_cmd);
             }
         }
